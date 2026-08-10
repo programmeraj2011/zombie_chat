@@ -5,9 +5,9 @@
 A lightweight local-network chat system built with **Python and Flask**.
 
 Zombie Chat allows people connected to the same local network to communicate,
-share images, and capture photos directly through their device camera.
+send messages, and share images.
 
-No account. No database. No external service required.
+No account. No database. No internet required.
 
 ---
 
@@ -15,15 +15,17 @@ No account. No database. No external service required.
 
 - 💬 Local-network messaging
 - 🧟 Persistent user handles
-- 📷 Built-in camera capture
 - 🖼️ Image sharing
 - 📱 Mobile-friendly interface
 - 🔄 Automatic message refresh
 - ⚡ Lightweight Flask backend
-- 🎨 Retro hacker-style UI
+- 🎨 Retro hacker-style interface
 - 💾 LocalStorage-based handle memory
-- 🌐 Works without an internet connection
+- 🌐 Works on a local network
 - 👥 Multiple devices can connect to the same server
+
+> 📷 Camera capture was intentionally removed to keep the project simple and
+> avoid browser HTTPS/camera permission issues.
 
 ---
 
@@ -35,11 +37,7 @@ No account. No database. No external service required.
 
 ### 💬 Chat Interface
 
-![Zombie Chat](screenshots/chat.png)
-
-### 📷 Camera
-
-![Zombie Chat Camera](screenshots/camera.png)
+![Zombie Chat Chat](screenshots/chat.png)
 
 ---
 
@@ -47,18 +45,16 @@ No account. No database. No external service required.
 
 ## 📋 Requirements
 
-Before installing Zombie Chat, make sure you have:
+You need:
 
 - Python 3.x
 - Git
 - A modern web browser
-- A local Wi-Fi/network if using multiple devices
+- Wi-Fi/local network for multiple devices
 
 ---
 
-## 1️⃣ Clone the Repository
-
-Open your terminal or command prompt and run:
+## 1. Clone the Repository
 
 ```bash
 git clone https://github.com/programmeraj2011/zombie_chat.git
