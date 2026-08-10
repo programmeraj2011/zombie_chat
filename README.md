@@ -34,5 +34,5 @@ share images, and capture photos directly from their camera.
 Clone the repository:
 
 ```bash
-git clone YOUR_REPOSITORY_URL
-cd zombie-chat
+git clone https://github.com/programmeraj2011/zombie_chat
+cd zombie_chat
