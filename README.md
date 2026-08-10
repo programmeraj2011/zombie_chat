@@ -4,28 +4,23 @@
 
 A lightweight local-network chat system built with **Python and Flask**.
 
-Zombie Chat allows people connected to the same local network to communicate,
-send messages, and share images.
-
-No account. No database. No internet required.
+Zombie Chat lets people connected to the same local network send messages and share images without requiring the internet.
 
 ---
 
 ## ✨ Features
 
-- 💬 Local-network messaging
+- 💬 Local network chat
 - 🧟 Persistent user handles
 - 🖼️ Image sharing
-- 📱 Mobile-friendly interface
+- 📱 Mobile-friendly UI
 - 🔄 Automatic message refresh
 - ⚡ Lightweight Flask backend
 - 🎨 Retro hacker-style interface
 - 💾 LocalStorage-based handle memory
-- 🌐 Works on a local network
-- 👥 Multiple devices can connect to the same server
-
-> 📷 Camera capture was intentionally removed to keep the project simple and
-> avoid browser HTTPS/camera permission issues.
+- 🌐 Works across devices on the same network
+- 🚫 No camera or HTTPS required
+- 👥 Multiple users can connect to the same server
 
 ---
 
@@ -58,38 +53,72 @@ You need:
 
 ```bash
 git clone https://github.com/programmeraj2011/zombie_chat.git
+```
+
+---
+
+## 2. Enter the Project
+
+```bash
 cd zombie_chat
-python chat.py
-2. Enter the Project
-cd zombie_chat
-3. Create a Virtual Environment
-Windows
+```
+
+---
+
+## 3. Create a Virtual Environment
+
+### Windows
+
+```bash
 python -m venv venv
+```
 
 Activate it:
 
+```bash
 venv\Scripts\activate
-Linux / macOS
+```
+
+### Linux / macOS
+
+```bash
 python3 -m venv venv
+```
 
 Activate it:
 
+```bash
 source venv/bin/activate
-4. Install Dependencies
+```
+
+---
+
+## 4. Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
 The project uses:
 
+```text
 Flask
 Werkzeug
-▶️ Running Zombie Chat
+```
+
+---
+
+# ▶️ Running Zombie Chat
 
 Start the server:
 
+```bash
 python chat.py
+```
 
 You should see:
 
+```text
 ==================================================
        🧟 ZOMBIE // CHAT
 ==================================================
@@ -104,80 +133,115 @@ Camera: DISABLED
 Image upload: ENABLED
 
 ==================================================
-🌐 Open on Your Computer
+```
+
+---
+
+## 🌐 Open on Your Computer
 
 Open:
 
+```text
 http://127.0.0.1:5000
+```
 
 You can also use:
 
+```text
 http://localhost:5000
-📡 Use Zombie Chat on Multiple Devices
+```
+
+---
+
+# 📡 Use Zombie Chat on Multiple Devices
 
 Zombie Chat can work across devices connected to the same local network.
 
-Step 1 — Start the Server
+### Step 1 — Start the Server
 
 On your computer:
 
+```bash
 python chat.py
-Step 2 — Find Your Local IP
+```
+
+### Step 2 — Find Your Local IP
 
 On Windows:
 
+```bash
 ipconfig
+```
 
 Look for:
 
+```text
 IPv4 Address
+```
 
 Example:
 
+```text
 192.168.1.5
-Step 3 — Connect Your Phone
+```
+
+### Step 3 — Connect Your Phone
 
 Connect your phone to the same Wi-Fi network.
 
 Open:
 
+```text
 http://192.168.1.5:5000
+```
 
-Replace 192.168.1.5 with the IP address of your computer.
+Replace `192.168.1.5` with the IP address of your computer.
 
-🧟 Persistent Handles
+---
+
+# 🧟 Persistent Handles
 
 The first time you open Zombie Chat, you enter your handle.
 
 Example:
 
+```text
 programmer_aj
+```
 
-Your handle is saved using browser LocalStorage.
+Your handle is saved using browser **LocalStorage**.
 
 When you open the website again, you don't need to enter it again.
 
-You can change it using the CHANGE button.
+You can change it using the **CHANGE** button.
 
 Your handle may be reset if browser site data or LocalStorage is cleared.
 
-🖼️ Image Sharing
+---
+
+# 🖼️ Image Sharing
 
 Zombie Chat supports image uploads directly from the chat interface.
 
 Click:
 
+```text
 + IMAGE
+```
 
 Choose an image and send it with your message.
 
 Uploaded images are stored in:
 
+```text
 uploads/
+```
 
-Uploaded files are excluded from Git using .gitignore.
+Uploaded files are excluded from Git using `.gitignore`.
 
-💬 Messaging
+---
+
+# 💬 Messaging
 
 Messages are handled by the Flask backend.
 
@@ -187,21 +251,34 @@ The current chat history is stored in server memory.
 
 Therefore:
 
-Restarting the Flask server clears the current chat history.
+> Restarting the Flask server clears the current chat history.
 
-🛠️ Tech Stack
-Backend
-🐍 Python
-🌶️ Flask
-Werkzeug
-Frontend
-HTML
-CSS
-JavaScript
-Browser APIs
-💾 LocalStorage
-🌐 Fetch API
-📁 Project Structure
+---
+
+# 🛠️ Tech Stack
+
+### Backend
+
+- 🐍 Python
+- 🌶️ Flask
+- Werkzeug
+
+### Frontend
+
+- HTML
+- CSS
+- JavaScript
+
+### Browser APIs
+
+- 💾 LocalStorage
+- 🌐 Fetch API
+
+---
+
+# 📁 Project Structure
+
+```text
 zombie_chat/
 │
 ├── chat.py
@@ -216,95 +293,171 @@ zombie_chat/
 └── screenshots/
     ├── home.png
     └── chat.png
-📦 requirements.txt
+```
+
+---
+
+# 📦 requirements.txt
+
+```text
 Flask
 Werkzeug
+```
 
 Install them with:
 
+```bash
 pip install -r requirements.txt
-🔧 Troubleshooting
-Flask is not installed
+```
+
+---
+
+# 🔧 Troubleshooting
+
+## Flask is not installed
 
 Run:
 
+```bash
 pip install -r requirements.txt
-python is not recognized
+```
+
+---
+
+## `python` is not recognized
 
 Try:
 
+```bash
 python3 chat.py
+```
 
 If that doesn't work, install Python and add it to your PATH.
 
-Other devices cannot connect
+---
+
+## Other devices cannot connect
 
 Check that:
 
-Both devices are connected to the same Wi-Fi
-Zombie Chat is running
-You are using the correct local IP
-Port 5000 is allowed through Windows Firewall
+- Both devices are connected to the same Wi-Fi
+- Zombie Chat is running
+- You are using the correct local IP
+- Port `5000` is allowed through Windows Firewall
 
 Example:
 
+```text
 http://192.168.1.5:5000
-Images are not uploading
+```
 
-Make sure the uploads/ directory exists:
+---
 
+## Images are not uploading
+
+Make sure the `uploads/` directory exists:
+
+```text
 uploads/
+```
 
 The project automatically creates it when the server starts.
 
-🔒 Privacy & Security
+---
+
+## Chat history disappeared
+
+Zombie Chat currently stores messages in server memory.
+
+Restarting:
+
+```bash
+python chat.py
+```
+
+will clear the existing chat history.
+
+---
+
+# 🔒 Privacy & Security
 
 Zombie Chat is designed for local-network experimentation.
 
 It does not currently provide:
 
-User authentication
-End-to-end encryption
-Database storage
-Production-grade security
+- User authentication
+- End-to-end encryption
+- Database storage
+- Production-grade security
 
-Do not expose the Flask development server directly to the public internet
-without adding appropriate security controls.
+Do not expose the Flask development server directly to the public internet without adding appropriate security controls.
 
-⚠️ Disclaimer
+---
 
-Zombie Chat is an experimental project created for learning,
-experimentation, and local-network communication.
+# ⚠️ Disclaimer
 
-It uses Flask's development server and is not intended to be a
-production-ready chat service.
+Zombie Chat is an experimental project created for learning, experimentation, and local-network communication.
 
-🤝 Contributing
+It uses Flask's development server and is not intended to be a production-ready chat service.
+
+---
+
+# 🤝 Contributing
 
 Contributions and ideas are welcome.
 
 You can:
 
-Fork the repository
-Create a branch
-Make your changes
-Commit your changes
-Open a pull request
+1. Fork the repository
+2. Create a branch
+3. Make your changes
+4. Commit your changes
+5. Open a pull request
 
 Example:
 
+```bash
 git checkout -b feature/new-feature
+```
+
+```bash
 git add .
+```
+
+```bash
 git commit -m "Add new feature"
+```
+
+```bash
 git push origin feature/new-feature
-👨‍💻 Creator
-Aditya Jaiswal
+```
+
+---
+
+# 👨‍💻 Creator
+
+## Aditya Jaiswal
 
 Built with:
 
+```text
 Python + Flask + JavaScript + ☕ + 🧟
-📜 License
+```
 
-This project is licensed under the MIT License.
+---
 
-See the LICENSE file for the complete license text.
+# 📜 License
+
+This project is licensed under the **MIT License**.
+
+See the `LICENSE` file for the complete license text.
+
+---
+
+## 🧟 ZOMBIE // CHAT
+
+> **TALK. SHARE. SURVIVE.**
+
+Built for local networks.  
+Built for experimentation.  
+Built without depending on the internet.
